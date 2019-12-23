@@ -1,7 +1,7 @@
 from setuptools import setup
 
 install_requires = [
-    'aiohttp',
+    'aiohttp==3.6.2',
 ]
 
 setup(
