@@ -1,11 +1,9 @@
 from aiohttp import web
 
-from .api import routes, init_app
+from .api import routes, init_app, middleware
 
-
-# noinspection PyUnusedLocal
-def get_app(argv):
-    app = web.Application()
+def get_app():
+    app = web.Application(middlewares=[middleware])
     app.on_startup.append(init_app)
     app.add_routes(routes)
     return app

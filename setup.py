@@ -2,6 +2,7 @@ from setuptools import setup
 
 install_requires = [
     'aiohttp==3.6.2',
+    'pymorphy2==0.8',
 ]
 
 setup(
